@@ -18,6 +18,8 @@ Built for one user and a 2018 Infiniti Q50 3.0t, but works for any vehicle.
 - **Step checklist**: tick off steps as you work; progress is saved.
 - **Diagrams & documents**: attach photos, screenshots or PDF pages (e.g. from a
   factory service manual) to any repair. Tap an image to view it full screen with pinch zoom.
+- **Library portal**: save the link to your library's repair database in Settings; every repair gets an
+  "Open in …" button that opens it and copies the car + job to paste into its search.
 - **Videos**: one-tap YouTube search for your exact car + job, and save links you liked.
 - **Notes, custom repairs, job log** (with total spent / saved vs. shop), **NHTSA recalls**.
 - **Works offline** once loaded and installs to the home screen (PWA).

@@ -62,6 +62,20 @@
     return 'https://www.youtube.com/results?search_query=' + encodeURIComponent(q);
   }
 
+  // Opens the user's library repair-database portal and copies a search phrase to paste there.
+  function libraryButton(v, r, cls = 'btn small') {
+    const { libraryName, libraryUrl } = S().settings;
+    if (!libraryUrl) return `<a class="${cls}" href="#/settings">Set up library portal</a>`;
+    const q = `${v.year} ${v.make} ${v.model} ${(v.engine || '').replace(/\(.*?\)/g, '')}${r ? ' ' + r.title : ''}`.replace(/\s+/g, ' ').trim();
+    return `<a class="${cls} lib-link" target="_blank" rel="noopener" href="${esc(libraryUrl)}" data-q="${esc(q)}">Open in ${esc(libraryName || 'library')} ↗</a>`;
+  }
+
+  // Copy the search phrase as the portal opens (clipboard needs a user gesture, which the click is).
+  document.addEventListener('click', e => {
+    const a = e.target.closest('.lib-link');
+    if (a && navigator.clipboard) navigator.clipboard.writeText(a.dataset.q).catch(() => {});
+  });
+
   function ytId(url) {
     const m = String(url).match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);
     return m && m[1];
@@ -169,6 +183,7 @@
           <div class="muted">${specificCount} vehicle-specific · ${all.length - specificCount} generic · shop rate ${money(S().settings.laborRate)}/hr</div>
         </div>
         <div class="actions">
+          ${libraryButton(v, null, 'btn')}
           <a class="btn" href="#/v/${vid}/recalls">Recalls</a>
           <a class="btn" href="#/v/${vid}/log">Job log</a>
           <a class="btn" href="#/v/${vid}/new">+ Custom repair</a>
@@ -271,8 +286,8 @@
 
       <section class="card">
         <div class="sec-head"><h3>Diagrams & documents</h3>
-          <label class="btn small">+ Add photo/PDF<input type="file" id="fileIn" accept="image/*,application/pdf" multiple hidden></label></div>
-        <p class="small muted">Add pages from your service manual, screenshots, or photos you take during the job. Stored only on this device.</p>
+          <div class="actions tight">${libraryButton(v, r)}<label class="btn small">+ Add photo/PDF<input type="file" id="fileIn" accept="image/*,application/pdf" multiple hidden></label></div></div>
+        <p class="small muted">Add pages from your service manual, screenshots, or photos you take during the job. Stored only on this device.${S().settings.libraryUrl ? ' “Open in library” copies this car + job to your clipboard — paste it into the site’s search. To keep a page: Chrome ⋮ → Share → Print → Save as PDF, then add it here.' : ''}</p>
         <div id="files" class="thumbs"></div>
       </section>
 
@@ -497,6 +512,10 @@
         <label>Shop labor rate (per hour)<input id="rate" type="number" min="0" value="${st.laborRate}"></label>
         <label>Shop parts markup (%)<input id="markup" type="number" min="0" value="${st.partsMarkup}"></label>
         <label>Currency<input id="cur" maxlength="3" value="${esc(st.currency)}"></label>
+        <h3>Library repair database</h3>
+        <p class="small muted">Paste the link your library gives you for its repair database (the page that asks for your library card). NavaAuto just opens it — you log in on their site, and your card number is never stored here.</p>
+        <label>Name<input id="libName" placeholder="e.g. ALLDATA, ChiltonLibrary, ProDemand" value="${esc(st.libraryName)}"></label>
+        <label>Portal link<input id="libUrl" type="url" placeholder="https://…" value="${esc(st.libraryUrl)}"></label>
         <button class="btn primary">Save</button>
       </form>
       <section class="card">
@@ -516,6 +535,8 @@
       st.laborRate = +document.getElementById('rate').value || 0;
       st.partsMarkup = +document.getElementById('markup').value || 0;
       st.currency = (document.getElementById('cur').value || 'USD').toUpperCase();
+      st.libraryName = document.getElementById('libName').value.trim();
+      st.libraryUrl = document.getElementById('libUrl').value.trim();
       Store.save(); alert('Saved');
     };
     document.getElementById('exp').onclick = async () => {

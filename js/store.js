@@ -5,7 +5,7 @@ const Store = (() => {
     vehicles: [
       { id: 'v-q50', year: 2018, make: 'INFINITI', model: 'Q50', engine: '3.0t (VR30DDTT)', nickname: 'My Q50', mileage: '' }
     ],
-    settings: { laborRate: 150, partsMarkup: 40, currency: 'USD' },
+    settings: { laborRate: 150, partsMarkup: 40, currency: 'USD', libraryName: '', libraryUrl: '' },
     progress: {},   // "vid:rid" -> [bool per step]
     notes: {},      // "vid:rid" -> string
     videos: {},     // "vid:rid" -> [{ url, title }]
@@ -14,7 +14,11 @@ const Store = (() => {
   });
 
   let state;
-  try { state = Object.assign(defaults(), JSON.parse(localStorage.getItem(KEY)) || {}); }
+  try {
+    const saved = JSON.parse(localStorage.getItem(KEY)) || {};
+    state = Object.assign(defaults(), saved);
+    state.settings = Object.assign(defaults().settings, saved.settings);
+  }
   catch { state = defaults(); }
 
   const save = () => {

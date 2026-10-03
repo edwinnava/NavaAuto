@@ -1,5 +1,5 @@
 // Offline support: app shell is cached; the repair library is network-first so edits show up.
-const CACHE = 'navaauto-v1';
+const CACHE = 'navaauto-v2';
 const SHELL = [
   './', 'index.html', 'css/styles.css', 'js/store.js', 'js/vpic.js', 'js/app.js',
   'data/repairs.json', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'
