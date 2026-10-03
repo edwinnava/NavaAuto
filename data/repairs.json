@@ -1,0 +1,596 @@
+{
+  "version": 1,
+  "notes": "Labor hours are approximate book-time estimates, not licensed labor-guide data. Specs marked verify:true must be confirmed against the factory service manual (FSM) before use.",
+  "repairs": [
+    {
+      "id": "q50-oil-change",
+      "title": "Engine Oil & Filter Change",
+      "category": "Maintenance",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": ["3.0", "vr30", "red sport", "400"] },
+      "laborHours": 0.5,
+      "difficulty": 1,
+      "interval": "Every 5,000 mi / 6 months (severe service) — check maintenance schedule",
+      "partsCost": [45, 90],
+      "parts": ["Full-synthetic engine oil (approx. 5 qt — verify)", "Oil filter", "Drain plug crush washer"],
+      "tools": ["Floor jack + jack stands or ramps", "Drain pan", "Oil filter wrench / cap socket", "Socket set", "Funnel", "Torque wrench"],
+      "specs": [
+        { "label": "Oil viscosity", "value": "Factory spec 0W-20 full synthetic (check oil cap / owner's manual)", "verify": true },
+        { "label": "Capacity with filter", "value": "Approx. 5.1 qt", "verify": true },
+        { "label": "Drain plug torque", "value": "Approx. 25 ft-lb (34 N·m)", "verify": true }
+      ],
+      "warnings": ["Never work under a car supported only by a jack.", "Hot oil can cause burns — let the engine cool 10–15 minutes after warming."],
+      "steps": [
+        { "text": "Run the engine for 2–3 minutes to warm the oil so it drains fully, then shut it off." },
+        { "text": "Raise the front of the car on ramps or jack stands at the factory lift points. Chock the rear wheels." },
+        { "text": "Open the access panel in the front engine undercover (or remove the undercover fasteners) to expose the drain plug and filter." },
+        { "text": "Remove the oil fill cap on top of the engine to let the oil drain faster." },
+        { "text": "Place the drain pan, remove the drain plug and let the oil drain completely." },
+        { "text": "Remove the oil filter. Wipe the mounting surface clean and make sure the old gasket came off with the filter." },
+        { "text": "Lightly oil the new filter's gasket and install it hand-tight plus about 3/4 turn (follow the filter's instructions)." },
+        { "text": "Install the drain plug with a NEW crush washer and torque to spec." },
+        { "text": "Lower the car so it sits level. Fill with the specified oil, starting about 1/2 qt under capacity." },
+        { "text": "Start the engine, check for leaks at the filter and plug, shut off, wait 2 minutes and check the dipstick. Top off to the full mark." },
+        { "text": "Reinstall the undercover access panel and reset the oil maintenance reminder in the vehicle settings menu." }
+      ],
+      "youtube": "oil change"
+    },
+    {
+      "id": "q50-spark-plugs",
+      "title": "Spark Plug Replacement (all 6)",
+      "category": "Ignition",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": ["3.0", "vr30", "red sport", "400"] },
+      "laborHours": 1.8,
+      "difficulty": 3,
+      "interval": "Factory interval per maintenance schedule; many owners do 30k–40k mi, sooner if tuned",
+      "partsCost": [70, 140],
+      "parts": ["6x OEM-spec iridium spark plugs (or one step colder if tuned)", "Dielectric grease (optional, for coil boots)"],
+      "tools": ["3/8\" ratchet + extensions + universal joint", "Thin-wall spark plug socket (size to match plug)", "Torque wrench (in-lb / low ft-lb range)", "Compressed air", "Trim/clip removal tool"],
+      "specs": [
+        { "label": "Spark plug torque", "value": "Approx. 13–15 ft-lb (18–20 N·m) on a clean, dry thread", "verify": true },
+        { "label": "Plug gap", "value": "Pre-gapped from factory — do not adjust iridium tips", "verify": true }
+      ],
+      "warnings": ["Only do this on a COLD engine — aluminum heads strip easily when hot.", "Blow out each plug well before removing the plug so debris doesn't fall into the cylinder."],
+      "steps": [
+        { "text": "Make sure the engine is fully cold. Disconnect the negative battery terminal (optional but recommended)." },
+        { "text": "Remove the plastic engine cover (pulls straight up off grommets)." },
+        { "text": "Unplug the electrical connector on each ignition coil. Press the lock tab fully before pulling." },
+        { "text": "Remove each coil's retaining bolt and pull the coils straight up. Keep them in order by cylinder." },
+        { "text": "Blow out each spark plug well with compressed air." },
+        { "text": "Remove one plug at a time with the thin-wall socket and extension. Inspect it — oily, white or heavily sooted plugs point to other problems." },
+        { "text": "Thread the new plug in BY HAND first (a short rubber hose on the plug end works well) to avoid cross-threading." },
+        { "text": "Torque each plug to spec. Do not use anti-seize unless the plug manufacturer calls for it (it changes the torque value)." },
+        { "text": "Optionally add a thin film of dielectric grease inside each coil boot, then reinstall coils, bolts and connectors." },
+        { "text": "Reinstall the engine cover, reconnect the battery, start the engine and confirm it idles smoothly with no check-engine light." }
+      ],
+      "youtube": "spark plug replacement"
+    },
+    {
+      "id": "q50-ignition-coils",
+      "title": "Ignition Coil Replacement",
+      "category": "Ignition",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": ["3.0", "vr30", "red sport", "400"] },
+      "laborHours": 0.8,
+      "laborNote": "All 6 coils; a single coil is roughly 0.3–0.4 hr",
+      "difficulty": 2,
+      "partsCost": [40, 360],
+      "parts": ["Ignition coil(s) — single coil or full set of 6"],
+      "tools": ["Socket set", "Extension", "Trim tool", "OBD-II scanner (to read misfire codes)"],
+      "specs": [],
+      "warnings": ["Misfire codes P0301–P0306 tell you which cylinder. Swap the suspect coil to another cylinder to confirm the misfire follows the coil before buying parts."],
+      "steps": [
+        { "text": "Read codes with an OBD-II scanner and note which cylinder is misfiring." },
+        { "text": "Remove the engine cover." },
+        { "text": "Unplug the coil connector, remove the retaining bolt and pull the coil straight up." },
+        { "text": "Diagnostic swap: move the suspect coil to a different cylinder, clear codes, drive and re-scan. If the misfire moved, the coil is bad." },
+        { "text": "Install the new coil, seat it fully, install the bolt and plug in the connector until it clicks." },
+        { "text": "Clear codes, reinstall the engine cover and test drive." }
+      ],
+      "youtube": "ignition coil replacement"
+    },
+    {
+      "id": "q50-engine-air-filters",
+      "title": "Engine Air Filters (both sides)",
+      "category": "Maintenance",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": ["3.0", "vr30", "red sport", "400"] },
+      "laborHours": 0.3,
+      "difficulty": 1,
+      "interval": "Inspect every oil change; replace roughly every 15k–30k mi",
+      "partsCost": [25, 60],
+      "parts": ["2x engine air filters (the 3.0t has one air box per turbo/bank)"],
+      "tools": ["Screwdriver or socket set (depending on air box fasteners)"],
+      "specs": [],
+      "warnings": [],
+      "steps": [
+        { "text": "Open the hood. Locate the two air boxes (driver and passenger side)." },
+        { "text": "Release the clips/screws on the first air box lid and lift it enough to remove the filter." },
+        { "text": "Note the filter orientation, remove it, and wipe out any debris in the box." },
+        { "text": "Install the new filter with the same orientation, making sure the seal sits evenly all the way around." },
+        { "text": "Close and secure the lid. Repeat on the other side." }
+      ],
+      "youtube": "engine air filter replacement"
+    },
+    {
+      "id": "q50-cabin-filter",
+      "title": "Cabin Air Filter",
+      "category": "Maintenance",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 0.3,
+      "difficulty": 1,
+      "interval": "Every 15k mi or yearly",
+      "partsCost": [15, 40],
+      "parts": ["Cabin air filter"],
+      "tools": ["None / trim tool"],
+      "specs": [],
+      "warnings": [],
+      "steps": [
+        { "text": "Empty the glove box and lower it (release the stops/damper on the sides)." },
+        { "text": "Unclip the filter access cover behind the glove box." },
+        { "text": "Slide out the old filter. Note the airflow arrow direction." },
+        { "text": "Insert the new filter with the airflow arrow pointing the same way as the old one." },
+        { "text": "Reinstall the cover and the glove box." }
+      ],
+      "youtube": "cabin air filter replacement"
+    },
+    {
+      "id": "q50-front-brakes",
+      "title": "Front Brake Pads & Rotors",
+      "category": "Brakes",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 1.6,
+      "laborNote": "Pads only is roughly 1.0 hr",
+      "difficulty": 2,
+      "partsCost": [180, 450],
+      "parts": ["Front brake pad set", "2x front rotors", "Brake caliper hardware / abutment clips", "Brake lubricant", "Brake parts cleaner"],
+      "tools": ["Jack + jack stands", "Lug wrench / impact", "Socket set", "C-clamp or caliper piston tool", "Torque wrench", "Wire brush"],
+      "specs": [
+        { "label": "Lug nut torque", "value": "80 ft-lb (108 N·m)", "verify": true },
+        { "label": "Caliper bracket bolts", "value": "See FSM — depends on caliper (Sport/Red Sport trims use larger multi-piston calipers)", "verify": true }
+      ],
+      "warnings": ["Brake parts must be confirmed for YOUR trim — Sport/Red Sport brakes are different from base brakes.", "Pump the brake pedal several times before driving after pushing pistons back."],
+      "steps": [
+        { "text": "Loosen lug nuts slightly, raise the front on jack stands and remove the wheels." },
+        { "text": "Check the brake fluid reservoir — if it's full, remove a little fluid so it doesn't overflow when pistons are pushed back." },
+        { "text": "Remove the pad retaining pins/clips (multi-piston) or caliper slide bolts (sliding caliper) and remove the old pads." },
+        { "text": "Remove the caliper bracket (or caliper on fixed calipers) and hang it with wire — don't let it hang by the brake hose." },
+        { "text": "Remove the rotor. If stuck, use the threaded jacking holes or tap the hat area with a mallet." },
+        { "text": "Clean the hub face with a wire brush so the new rotor sits flat." },
+        { "text": "Clean the new rotors with brake cleaner and install them." },
+        { "text": "Reinstall bracket/caliper with new hardware clips; lubricate slide pins and pad contact points lightly." },
+        { "text": "Push the pistons back evenly and install the new pads." },
+        { "text": "Reinstall the wheels and torque lugs to spec in a star pattern." },
+        { "text": "Pump the pedal until firm, check fluid level, then bed in the pads: several 35→5 mph moderate stops without coming to a full stop." }
+      ],
+      "youtube": "front brake pads and rotors"
+    },
+    {
+      "id": "q50-rear-brakes",
+      "title": "Rear Brake Pads & Rotors",
+      "category": "Brakes",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 1.6,
+      "laborNote": "Pads only is roughly 1.0 hr; add time if parking brake shoes need adjusting",
+      "difficulty": 2,
+      "partsCost": [160, 400],
+      "parts": ["Rear brake pad set", "2x rear rotors", "Caliper hardware", "Brake lubricant"],
+      "tools": ["Jack + jack stands", "Socket set", "Caliper piston tool", "Torque wrench", "Flat screwdriver / brake spoon (parking brake adjuster)"],
+      "specs": [
+        { "label": "Lug nut torque", "value": "80 ft-lb (108 N·m)", "verify": true }
+      ],
+      "warnings": ["Release the parking brake before removing rotors.", "The rear rotor has a drum-in-hat parking brake on many trims — if the rotor won't come off, back off the parking brake shoe adjuster."],
+      "steps": [
+        { "text": "Chock the front wheels, release the parking brake, raise the rear on jack stands and remove the wheels." },
+        { "text": "Remove the caliper (or pad pins on multi-piston calipers) and remove the old pads." },
+        { "text": "Remove the caliper bracket and hang the caliper with wire." },
+        { "text": "Remove the rotor. If it binds on the parking brake shoes, back off the adjuster through the access hole." },
+        { "text": "Inspect the parking brake shoes while the rotor is off." },
+        { "text": "Clean the hub, install the new rotor, bracket and hardware." },
+        { "text": "Retract the piston, install new pads and the caliper." },
+        { "text": "Adjust the parking brake shoes if needed per FSM procedure." },
+        { "text": "Reinstall wheels, torque lugs, pump the pedal until firm and bed in the pads." }
+      ],
+      "youtube": "rear brake pads and rotors"
+    },
+    {
+      "id": "q50-brake-fluid",
+      "title": "Brake Fluid Flush / Bleed",
+      "category": "Brakes",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 1.0,
+      "difficulty": 2,
+      "interval": "Every 2–3 years",
+      "partsCost": [15, 35],
+      "parts": ["DOT 3 brake fluid (check reservoir cap for spec), 1 liter"],
+      "tools": ["Bleeder wrench", "Clear tubing + catch bottle", "Turkey baster", "Helper or pressure/vacuum bleeder", "Jack + jack stands"],
+      "specs": [
+        { "label": "Bleed order", "value": "Typically farthest from master cylinder first: RR, LR, RF, LF — confirm in FSM", "verify": true }
+      ],
+      "warnings": ["Brake fluid strips paint — cover painted surfaces and rinse spills with water immediately.", "Never let the reservoir run dry while bleeding or you'll get air in the ABS unit."],
+      "steps": [
+        { "text": "Remove old fluid from the reservoir with a baster and refill with fresh fluid." },
+        { "text": "Raise the car and remove the wheels (or reach the bleeders through the wheel)." },
+        { "text": "Starting at the first wheel in the bleed order, attach tubing to the bleeder into a catch bottle." },
+        { "text": "Have a helper press and hold the pedal, open the bleeder, close it, then release the pedal. Repeat until clean fluid with no bubbles comes out." },
+        { "text": "Top up the reservoir frequently. Repeat at each wheel in order." },
+        { "text": "Torque bleeders snugly (don't overtighten), fill reservoir to MAX, confirm a firm pedal before driving." }
+      ],
+      "youtube": "brake fluid flush"
+    },
+    {
+      "id": "q50-battery",
+      "title": "12V Battery Replacement",
+      "category": "Electrical",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 0.4,
+      "difficulty": 1,
+      "partsCost": [150, 300],
+      "parts": ["12V battery (match group size, CCA and type — AGM if originally AGM)"],
+      "tools": ["10 mm wrench/socket", "Socket extension", "Terminal brush", "Memory saver (optional)"],
+      "specs": [],
+      "warnings": ["Always disconnect NEGATIVE first and reconnect it LAST.", "After replacement you may need to re-initialize auto up/down windows and the sunroof."],
+      "steps": [
+        { "text": "Turn everything off and remove the key/fob from the car." },
+        { "text": "Locate the battery and remove any covers or trim over it." },
+        { "text": "Disconnect the negative (−) terminal, then the positive (+) terminal." },
+        { "text": "Remove the hold-down bracket and lift the battery out (it's heavy — lift with your legs)." },
+        { "text": "Clean the terminals and tray. Install the new battery in the same orientation." },
+        { "text": "Install the hold-down, connect positive (+) then negative (−)." },
+        { "text": "Start the car, then re-initialize power windows (hold switch down past auto, then up past auto and hold a few seconds) and sunroof if needed." }
+      ],
+      "youtube": "battery replacement"
+    },
+    {
+      "id": "q50-coolant",
+      "title": "Engine Coolant Drain & Fill",
+      "category": "Cooling",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": ["3.0", "vr30", "red sport", "400"] },
+      "laborHours": 1.2,
+      "difficulty": 2,
+      "partsCost": [40, 80],
+      "parts": ["Nissan/Infiniti Long Life Antifreeze (blue) or compatible, premixed 50/50"],
+      "tools": ["Drain pan", "Funnel (spill-free funnel recommended)", "Pliers", "Jack + jack stands"],
+      "specs": [
+        { "label": "Coolant type", "value": "Infiniti Long Life Coolant (blue), 50/50 premix", "verify": true }
+      ],
+      "warnings": ["Never open the cooling system when hot.", "The 3.0t has a SEPARATE low-temperature coolant loop for the intercoolers — this procedure is for the main engine loop. See the intercooler coolant job for that loop.", "Coolant is toxic to pets — clean up spills."],
+      "steps": [
+        { "text": "Make sure the engine is fully cold. Remove the radiator cap." },
+        { "text": "Raise the front and remove the undercover to reach the radiator drain cock." },
+        { "text": "Open the radiator drain and drain into the pan. Close the drain when empty." },
+        { "text": "Fill slowly through the radiator with the specified coolant (spill-free funnel helps burp air)." },
+        { "text": "Open any air bleed points per FSM, start the engine with heater on HOT and let it reach operating temperature, topping off as bubbles rise." },
+        { "text": "Shut off, let it cool, top off the radiator and the reservoir to the MAX/FULL line." },
+        { "text": "Recheck the level after the next couple of drives." }
+      ],
+      "youtube": "coolant flush"
+    },
+    {
+      "id": "q50-intercooler-coolant",
+      "title": "Intercooler (Low-Temp) Coolant Drain & Fill",
+      "category": "Cooling",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": ["3.0", "vr30", "red sport", "400"] },
+      "laborHours": 0.8,
+      "difficulty": 2,
+      "partsCost": [30, 60],
+      "parts": ["Infiniti-spec coolant for the intercooler circuit, premixed"],
+      "tools": ["Drain pan", "Funnel", "Hose clamp pliers", "OBD-II scan tool capable of running the intercooler pump (helpful for bleeding)"],
+      "specs": [],
+      "warnings": ["The intercooler loop has its own reservoir and electric pump — air in this loop raises intake temps and costs power.", "Confirm the drain location and bleed procedure in the FSM for your year."],
+      "steps": [
+        { "text": "With the engine cold, locate the intercooler coolant reservoir (separate from the main engine reservoir)." },
+        { "text": "Raise the car, remove the undercover, and drain from the lowest point of the intercooler circuit (low-temp radiator)." },
+        { "text": "Refill through the intercooler reservoir slowly." },
+        { "text": "Run the electric intercooler pump (key on / scan tool activation) to circulate coolant and purge air, topping off as the level drops." },
+        { "text": "Recheck the level after a test drive once everything has cooled." }
+      ],
+      "youtube": "intercooler coolant bleed"
+    },
+    {
+      "id": "q50-atf",
+      "title": "Automatic Transmission Fluid Drain & Fill (7-speed)",
+      "category": "Drivetrain",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 1.2,
+      "difficulty": 4,
+      "partsCost": [60, 120],
+      "parts": ["Infiniti-specified ATF (Matic S per most references — verify)", "Drain/fill plug washers"],
+      "tools": ["Jack + jack stands (car must be LEVEL)", "Fluid pump", "Socket set", "OBD-II scan tool that reads ATF temperature", "Infrared thermometer (backup)"],
+      "specs": [
+        { "label": "Fluid type", "value": "Nissan Matic S ATF", "verify": true },
+        { "label": "Level check temperature", "value": "Check at the FSM-specified ATF temperature window", "verify": true }
+      ],
+      "warnings": ["This transmission has no dipstick — the level MUST be set at the correct fluid temperature with the car level, or you risk over/underfilling.", "A single drain & fill replaces only part of the fluid; repeat for a fuller exchange."],
+      "steps": [
+        { "text": "Raise the car level on four jack stands." },
+        { "text": "Remove the drain plug and drain the fluid. Measure how much came out." },
+        { "text": "Reinstall the drain plug with a new washer." },
+        { "text": "Remove the fill/overflow plug and pump in roughly the amount you drained." },
+        { "text": "Start the engine, cycle through gears with the brake held, and monitor ATF temperature with the scan tool." },
+        { "text": "At the specified temperature, with the engine running, open the overflow — fluid should just trickle out. Add fluid until it does." },
+        { "text": "Reinstall the fill plug with a new washer and torque to spec." }
+      ],
+      "youtube": "transmission fluid change"
+    },
+    {
+      "id": "q50-rear-diff",
+      "title": "Rear Differential Fluid",
+      "category": "Drivetrain",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 0.5,
+      "difficulty": 2,
+      "partsCost": [25, 50],
+      "parts": ["Gear oil per FSM spec (GL-5, approx. 1–1.5 qt — verify)", "Drain/fill plug gaskets"],
+      "tools": ["Jack + jack stands (car level)", "Socket/hex set", "Fluid pump"],
+      "specs": [
+        { "label": "Fluid", "value": "GL-5 gear oil, viscosity per FSM", "verify": true }
+      ],
+      "warnings": ["ALWAYS loosen the FILL plug first — if you drain it and can't open the fill plug, you're stuck."],
+      "steps": [
+        { "text": "Raise the car level." },
+        { "text": "Break loose the FILL plug first." },
+        { "text": "Remove the drain plug and drain the fluid. Clean the magnetic plug." },
+        { "text": "Reinstall the drain plug with a new gasket." },
+        { "text": "Pump fluid into the fill hole until it starts to run out." },
+        { "text": "Reinstall the fill plug with a new gasket." }
+      ],
+      "youtube": "rear differential fluid change"
+    },
+    {
+      "id": "q50-drive-belt",
+      "title": "Accessory Drive Belt",
+      "category": "Engine",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": ["3.0", "vr30", "red sport", "400"] },
+      "laborHours": 0.6,
+      "difficulty": 2,
+      "partsCost": [30, 70],
+      "parts": ["Accessory drive (serpentine) belt"],
+      "tools": ["Belt tensioner tool or long-handle ratchet", "Socket set", "Phone camera (photo the belt routing first)"],
+      "specs": [],
+      "warnings": ["Take a photo of the belt routing BEFORE removing the old belt."],
+      "steps": [
+        { "text": "Photograph the belt routing (there's often a diagram on a sticker under the hood)." },
+        { "text": "Remove the undercover / any covers blocking access to the tensioner." },
+        { "text": "Rotate the tensioner to relieve tension and slip the belt off one pulley, then remove it." },
+        { "text": "Spin each pulley by hand and check for noise, wobble or roughness (tensioner and idler)." },
+        { "text": "Route the new belt per the diagram, leaving one smooth pulley for last, then release the tensioner." },
+        { "text": "Verify the belt is seated in every groove, then start the engine and watch it run for a minute." }
+      ],
+      "youtube": "serpentine belt replacement"
+    },
+    {
+      "id": "q50-front-tension-rod",
+      "title": "Front Compression/Tension Rod (bushing clunk)",
+      "category": "Suspension",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 1.4,
+      "laborNote": "Per side; alignment recommended afterwards (~1.0 hr)",
+      "difficulty": 3,
+      "partsCost": [80, 250],
+      "parts": ["Front compression (tension) rod — per side", "New nuts if specified as one-time-use"],
+      "tools": ["Jack + jack stands", "Breaker bar", "Socket set", "Ball joint separator / pickle fork", "Torque wrench"],
+      "specs": [
+        { "label": "Bushing bolt torque", "value": "Tighten with the car at ride height (weight on wheels) — torque per FSM", "verify": true }
+      ],
+      "warnings": ["Final-tighten rubber bushings with the suspension loaded at ride height, or the new bushing will be pre-twisted and wear early."],
+      "steps": [
+        { "text": "Raise the front, support on stands and remove the wheel." },
+        { "text": "Remove the undercover pieces in the way." },
+        { "text": "Remove the nut from the ball joint end and separate it from the steering knuckle." },
+        { "text": "Remove the frame-side bushing bolt and remove the rod." },
+        { "text": "Install the new rod, ball joint nut torqued to spec, frame bolt snug only." },
+        { "text": "Lower the car or jack the hub to ride height, then torque the bushing bolt." },
+        { "text": "Reinstall the wheel and get an alignment." }
+      ],
+      "youtube": "front tension rod replacement"
+    },
+    {
+      "id": "q50-boost-leak",
+      "title": "Boost Leak / Charge Pipe Inspection",
+      "category": "Engine",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": ["3.0", "vr30", "red sport", "400"] },
+      "laborHours": 1.0,
+      "laborNote": "Diagnostic time; repairs billed separately",
+      "difficulty": 3,
+      "partsCost": [0, 60],
+      "parts": ["Boost leak tester adapter (DIY or purchased)", "Replacement couplers/clamps as found"],
+      "tools": ["Boost leak tester", "Air compressor with regulator", "Spray bottle with soapy water", "OBD-II scanner / boost gauge"],
+      "specs": [
+        { "label": "Test pressure", "value": "Keep test pressure low (~15–20 psi) and never leave unattended", "verify": false }
+      ],
+      "warnings": ["Do not start the engine with the boost leak tester installed.", "Engine valves may be open on a cylinder — some air escaping out the exhaust or crankcase is normal."],
+      "steps": [
+        { "text": "Symptoms to look for: underboost codes, hissing under load, power loss, fluttering sounds." },
+        { "text": "Remove the engine cover and visually inspect charge pipes, couplers and clamps between turbos, intercoolers and throttle body." },
+        { "text": "Install the boost leak tester at the turbo inlets (one side at a time on twin-turbo)." },
+        { "text": "Pressurize slowly to the test pressure and listen. Spray soapy water on joints — bubbles show leaks." },
+        { "text": "Repair any leaking couplers/clamps, retest, and clear codes." }
+      ],
+      "youtube": "boost leak test"
+    },
+    {
+      "id": "q50-tire-rotation",
+      "title": "Tire Rotation",
+      "category": "Wheels & Tires",
+      "appliesTo": { "make": "INFINITI", "models": ["Q50", "Q60"], "years": [2016, 2024], "engine": [] },
+      "laborHours": 0.5,
+      "difficulty": 1,
+      "interval": "Every 5,000–7,500 mi",
+      "partsCost": [0, 0],
+      "parts": [],
+      "tools": ["Jack + 2–4 jack stands", "Lug wrench / impact", "Torque wrench", "Tire pressure gauge"],
+      "specs": [
+        { "label": "Lug nut torque", "value": "80 ft-lb (108 N·m)", "verify": true },
+        { "label": "Rotation pattern", "value": "Staggered setups (different front/rear sizes) can only swap side-to-side if non-directional", "verify": false }
+      ],
+      "warnings": ["If your car has a staggered wheel/tire setup, you cannot rotate front-to-rear."],
+      "steps": [
+        { "text": "Loosen all lug nuts a half turn with the car on the ground." },
+        { "text": "Raise and support the car." },
+        { "text": "Rotate front-to-rear on the same side (square setups with directional tires), or per the tire manufacturer's pattern." },
+        { "text": "Snug lug nuts, lower the car, torque in a star pattern." },
+        { "text": "Set tire pressures to the door-jamb placard and reset the TPMS if needed." }
+      ],
+      "youtube": "tire rotation"
+    },
+    {
+      "id": "gen-oil-change",
+      "title": "Engine Oil & Filter Change",
+      "category": "Maintenance",
+      "appliesTo": "*",
+      "laborHours": 0.5,
+      "difficulty": 1,
+      "partsCost": [35, 90],
+      "parts": ["Engine oil (type/capacity per owner's manual)", "Oil filter", "Drain plug washer"],
+      "tools": ["Jack + jack stands or ramps", "Drain pan", "Filter wrench", "Socket set", "Funnel"],
+      "specs": [{ "label": "Oil type & capacity", "value": "See owner's manual / oil cap", "verify": true }],
+      "warnings": ["Never work under a car supported only by a jack."],
+      "steps": [
+        { "text": "Warm the engine briefly, then shut it off." },
+        { "text": "Safely raise the car and locate the drain plug and filter." },
+        { "text": "Drain the oil, then replace the filter (oil the new gasket)." },
+        { "text": "Reinstall the drain plug with a new washer." },
+        { "text": "Refill with the specified oil, run the engine, check for leaks, recheck the dipstick." },
+        { "text": "Reset the oil life monitor." }
+      ],
+      "youtube": "oil change"
+    },
+    {
+      "id": "gen-front-brakes",
+      "title": "Front Brake Pads & Rotors",
+      "category": "Brakes",
+      "appliesTo": "*",
+      "laborHours": 1.5,
+      "laborNote": "Varies by vehicle (1.0–2.0 hr typical)",
+      "difficulty": 2,
+      "partsCost": [120, 400],
+      "parts": ["Front brake pads", "Front rotors", "Caliper hardware", "Brake lubricant"],
+      "tools": ["Jack + jack stands", "Socket set", "C-clamp", "Torque wrench"],
+      "specs": [{ "label": "Lug nut torque", "value": "See owner's manual", "verify": true }],
+      "warnings": ["Pump the brake pedal before driving."],
+      "steps": [
+        { "text": "Raise the car and remove the front wheels." },
+        { "text": "Remove the caliper and bracket; hang the caliper with wire." },
+        { "text": "Replace the rotor and pad hardware." },
+        { "text": "Compress the piston, install pads and caliper." },
+        { "text": "Torque everything to spec, pump the pedal, bed in the pads." }
+      ],
+      "youtube": "front brake pads and rotors"
+    },
+    {
+      "id": "gen-battery",
+      "title": "12V Battery Replacement",
+      "category": "Electrical",
+      "appliesTo": "*",
+      "laborHours": 0.4,
+      "difficulty": 1,
+      "partsCost": [120, 300],
+      "parts": ["Battery (correct group size)"],
+      "tools": ["10 mm wrench", "Terminal brush"],
+      "specs": [],
+      "warnings": ["Disconnect negative first, reconnect negative last."],
+      "steps": [
+        { "text": "Disconnect negative, then positive." },
+        { "text": "Remove the hold-down and old battery." },
+        { "text": "Clean terminals, install the new battery." },
+        { "text": "Connect positive, then negative. Reset windows/clock as needed." }
+      ],
+      "youtube": "battery replacement"
+    },
+    {
+      "id": "gen-air-filter",
+      "title": "Engine Air Filter",
+      "category": "Maintenance",
+      "appliesTo": "*",
+      "laborHours": 0.2,
+      "difficulty": 1,
+      "partsCost": [15, 45],
+      "parts": ["Engine air filter"],
+      "tools": ["Screwdriver (if needed)"],
+      "specs": [],
+      "warnings": [],
+      "steps": [
+        { "text": "Open the air box." },
+        { "text": "Replace the filter in the same orientation." },
+        { "text": "Close the air box securely." }
+      ],
+      "youtube": "engine air filter replacement"
+    },
+    {
+      "id": "gen-cabin-filter",
+      "title": "Cabin Air Filter",
+      "category": "Maintenance",
+      "appliesTo": "*",
+      "laborHours": 0.3,
+      "difficulty": 1,
+      "partsCost": [15, 40],
+      "parts": ["Cabin air filter"],
+      "tools": [],
+      "specs": [],
+      "warnings": [],
+      "steps": [
+        { "text": "Access the filter (usually behind the glove box)." },
+        { "text": "Replace it, matching the airflow arrow." },
+        { "text": "Reassemble." }
+      ],
+      "youtube": "cabin air filter replacement"
+    },
+    {
+      "id": "gen-spark-plugs",
+      "title": "Spark Plug Replacement",
+      "category": "Ignition",
+      "appliesTo": "*",
+      "laborHours": 1.5,
+      "laborNote": "Varies widely: ~0.8 hr on an easy 4-cyl to 3+ hr on some V6/V8s",
+      "difficulty": 3,
+      "partsCost": [30, 150],
+      "parts": ["Spark plugs (per owner's manual)"],
+      "tools": ["Spark plug socket", "Extensions", "Torque wrench"],
+      "specs": [{ "label": "Gap & torque", "value": "Per plug manufacturer / FSM", "verify": true }],
+      "warnings": ["Work on a cold engine."],
+      "steps": [
+        { "text": "Remove coils or plug wires." },
+        { "text": "Blow out plug wells, remove plugs." },
+        { "text": "Thread new plugs by hand, torque to spec." },
+        { "text": "Reinstall coils/wires." }
+      ],
+      "youtube": "spark plug replacement"
+    },
+    {
+      "id": "gen-tire-rotation",
+      "title": "Tire Rotation",
+      "category": "Wheels & Tires",
+      "appliesTo": "*",
+      "laborHours": 0.5,
+      "difficulty": 1,
+      "partsCost": [0, 0],
+      "parts": [],
+      "tools": ["Jack + jack stands", "Lug wrench", "Torque wrench"],
+      "specs": [],
+      "warnings": [],
+      "steps": [
+        { "text": "Loosen lugs, raise the car." },
+        { "text": "Rotate per the tire manufacturer's pattern." },
+        { "text": "Torque lugs, set pressures." }
+      ],
+      "youtube": "tire rotation"
+    },
+    {
+      "id": "gen-brake-fluid",
+      "title": "Brake Fluid Flush",
+      "category": "Brakes",
+      "appliesTo": "*",
+      "laborHours": 1.0,
+      "difficulty": 2,
+      "partsCost": [15, 35],
+      "parts": ["Brake fluid (type on reservoir cap)"],
+      "tools": ["Bleeder wrench", "Tubing", "Catch bottle"],
+      "specs": [],
+      "warnings": ["Brake fluid damages paint."],
+      "steps": [
+        { "text": "Replace reservoir fluid with fresh fluid." },
+        { "text": "Bleed each wheel, farthest from master cylinder first." },
+        { "text": "Keep the reservoir topped up; confirm a firm pedal." }
+      ],
+      "youtube": "brake fluid flush"
+    }
+  ]
+}
